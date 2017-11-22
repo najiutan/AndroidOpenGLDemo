@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidOpenGLDemo.iml" filepath="$PROJECT_DIR$/AndroidOpenGLDemo.iml" />
+      <module fileurl="file://D:\statics\AndroidOpenGLDemo\AndroidOpenGLDemo.iml" filepath="D:\statics\AndroidOpenGLDemo\AndroidOpenGLDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\statics\AndroidOpenGLDemo\app\app.iml" filepath="D:\statics\AndroidOpenGLDemo\app\app.iml" />
     </modules>
   </component>
 </project>

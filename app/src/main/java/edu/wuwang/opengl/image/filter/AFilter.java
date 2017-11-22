@@ -145,6 +145,7 @@ public abstract class AFilter implements GLSurfaceView.Renderer {
         GLES20.glUniformMatrix4fv(glHMatrix,1,false,mMVPMatrix,0);
         GLES20.glEnableVertexAttribArray(glHPosition);
         GLES20.glEnableVertexAttribArray(glHCoordinate);
+        //使采样器 vTexture 读取 0号 纹理单元的纹理，createTexture中创建了0号单元
         GLES20.glUniform1i(glHTexture, 0);
         textureId=createTexture();
         GLES20.glVertexAttribPointer(glHPosition,2,GLES20.GL_FLOAT,false,0,bPos);
@@ -160,6 +161,8 @@ public abstract class AFilter implements GLSurfaceView.Renderer {
         if(mBitmap!=null&&!mBitmap.isRecycled()){
             //生成纹理
             GLES20.glGenTextures(1,texture,0);
+            //激活这个纹理
+            GLES20.glActiveTexture(texture[0]);
             //生成纹理
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,texture[0]);
             //设置缩小过滤为使用纹理中坐标最接近的一个像素的颜色作为需要绘制的像素颜色
